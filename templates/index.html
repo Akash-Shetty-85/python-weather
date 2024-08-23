@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet">
 </head>
 <body>
+   
+    <div id="main">
     <h1>Weather Forecast</h1>
     {% if error %}
         <p style="color:red;">Error: {{ error }}</p>
@@ -14,6 +20,29 @@
         <input type="text" name="city" placeholder="Enter city name" required>
         <button type="submit">Get Weather</button>
     </form>
-    
+
+    <div id="page2">
+        <nav> 
+            <h5> TODAY</h5>
+            <h5>DAILY</h5>
+            <h5>HOURLY</h5>
+            <h5>AIR QUALITY</h5>
+            <h5>RADAR</h5>
+        </nav>
+        <div id="nav1">
+            <h3>SUN & MOON </h3>
+            <hr>
+            <i class="ri-sun-line"> </i>12 hrs 29 mins <span>Rise   </span>   6.08 AM
+            <hr>
+            <i class="ri-contrast-2-line"></i> Waning Gibbous <span>Rise   </span>   8.47 PM
+        </div>
+        
+    </div>
+    <div id="page3">
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+    </div>
+    </div>
 </body>
 </html>

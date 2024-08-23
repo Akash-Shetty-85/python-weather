@@ -8,6 +8,7 @@ def get_weather(city_name):
     base_url = "http://api.weatherapi.com/v1/current.json?key="
     complete_url = base_url + api_key + "&q=" + city_name + "&units=metric"
     response = requests.get(complete_url)
+    print(response)
     
     if response.status_code != 200:
         return {"error": "Unable to fetch data."}
@@ -23,7 +24,7 @@ def index():
 def weather():
     city = request.form['city']
     weather_data = get_weather(city)
-    
+    print(weather_data)
     if 'error' in weather_data:  # Check if there's an error
         return render_template('index.html', error=weather_data['error'])
     
