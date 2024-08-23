@@ -23,7 +23,6 @@ def index():
 def weather():
     city = request.form['city']
     weather_data = get_weather(city)
-    
     if 'error' in weather_data:  # Check if there's an error
         return render_template('index.html', error=weather_data['error'])
     
